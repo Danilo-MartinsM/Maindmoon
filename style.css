@@ -273,27 +273,27 @@ footer {
 }
 
 
-.banner h1 {
-  font-size: 2em;
-}
+  .banner h1 {
+    font-size: 2em;
+  }
 
-.banner p {
-  font-size: 1em;
-}
+  .banner p {
+    font-size: 1em;
+  }
 
-.btn {
-  padding: 10px 20px;
-  font-size: 1em;
-}
+  .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
 
-.grid {
-  flex-direction: column;
-  align-items: center;
-}
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.produto {
-  width: 90%;
-}
+  .produto {
+    width: 90%;
+  }
 
 @media (max-width: 480px) {
   .banner {
@@ -330,13 +330,12 @@ footer {
   }
 }
 
-/* Remove o destaque azul em botões e links ao clicar (mobile e desktop) */
-a, button {
-  outline: none;
-  -webkit-tap-highlight-color: transparent; /* Safari (iOS) */
-  -webkit-focus-ring-color: transparent;
-}
-
+/* Remoção forçada do destaque azul e foco em botões e links */
+a, button,
+a:focus, button:focus,
 *:focus {
-  outline: none;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-focus-ring-color: transparent !important;
 }
