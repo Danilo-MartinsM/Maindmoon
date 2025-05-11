@@ -235,6 +235,7 @@ footer {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
+    z-index: 999;
   }
 
   nav.active {
@@ -252,22 +253,25 @@ footer {
 
   nav ul li a {
     font-size: 1.1em;
-    padding: 10px 0;
+    padding: 12px 20px;
     width: 100%;
     color: var(--branco);
-    transition: color 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 6px;
   }
 
   nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
     color: var(--dourado-solid);
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 5px;
   }
 
   nav ul li a::after {
     display: none;
   }
 }
+
 
   .banner h1 {
     font-size: 2em;
