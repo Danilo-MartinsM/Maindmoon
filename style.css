@@ -43,19 +43,44 @@
   nav ul {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    position: relative;
   }
   
   nav ul li a {
     color: var(--branco);
     text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s;
+    font-size: 1.05em;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+    position: relative;
+  }
+  
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: var(--dourado-solid);
+    transition: width 0.3s ease;
   }
   
   nav ul li a:hover {
     color: var(--dourado-solid);
   }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }  
   
   .banner {
     background: url('https://via.placeholder.com/1200x500') center/cover no-repeat;
